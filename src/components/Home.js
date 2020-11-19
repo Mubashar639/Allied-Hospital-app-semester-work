@@ -69,6 +69,14 @@ class BloodHome extends Component {
         color: '#8a0303',
       },
       {
+        name: 'Qr scanner',
+        code: '#9b59b6',
+        id: 4,
+        nav: 'ScanScreen',
+        icon: 'blood-drop',
+        color: '#8a0303',
+      },
+      {
         name: 'Doctors',
         code: '#1abc9c',
         id: 5,

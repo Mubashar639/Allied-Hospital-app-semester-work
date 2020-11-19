@@ -47,6 +47,7 @@ import SurgicalTwo from './src/components/departments/Surgical2';
 import Chatbot from './src/components/Chatbot';
 import Drawer from './src/components/drawer';
 import MyProfile from './src/bloodbank/Components/MyProfile/Myprofile';
+import ScanScreen from './src/components/qrCodeScanner';
 
 const MyDrawerNavigatorAfterLogin = createDrawerNavigator({
   Home: {
@@ -66,6 +67,8 @@ const AfterSignin = createStackNavigator({
     navigationOptions: {headerShown: false},
   },
   Department: {screen: Department, navigationOptions: {headerShown: false}},
+  ScanScreen: {screen: ScanScreen, navigationOptions: {headerShown: false}},
+
   MedicalUnit1: {screen: MedicalUnit1, navigationOptions: {headerShown: false}},
   Ent: {screen: Ent, navigationOptions: {headerShown: false}},
   Gynaecology: {screen: Gynaecology, navigationOptions: {headerShown: false}},
@@ -127,6 +130,8 @@ const BeforeSignin = createStackNavigator({
     screen: MedicalUnitThree,
     navigationOptions: {headerShown: false},
   },
+  ScanScreen: {screen: ScanScreen, navigationOptions: {headerShown: false}},
+
   Neurology: {screen: Neurology, navigationOptions: {headerShown: false}},
   Ophthamology: {screen: Ophthamology, navigationOptions: {headerShown: false}},
   Pediatric: {screen: Pediatric, navigationOptions: {headerShown: false}},

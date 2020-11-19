@@ -14,43 +14,48 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Profile from '../../Components/MyProfile/Myprofile';
 import {View, Text} from 'native-base';
 import PostDetail from '../../Screens/DetailPost/DetailPost';
+import ScanScreen from '../../../components/qrCodeScanner';
 
-const MyDrawerNavigator = createDrawerNavigator(
-  {
-    Home: {
-      screen: Myhome,
-      navigationOptions: {
-        drawerIcon: () => <Ionicons name="md-home" size={24} />,
-      },
-    },
-    CreatePost: {
-      screen: Post,
-      navigationOptions: {
-        drawerIcon: () => <Ionicons name="ios-create" size={24} />,
-      },
-    },
-    MyRequests: {
-      screen: MyRequests,
-      navigationOptions: {
-        drawerIcon: () => <Ionicons name="md-contacts" size={24} />,
-      },
-    },
-
-    Notification: {
-      screen: Notification,
-
-      navigationOptions: {
-        drawerIcon: () => <Ionicons name="md-notifications" size={24} />,
-      },
-    },
-    Settings: {
-      screen: Settings,
-      navigationOptions: {
-        drawerIcon: () => <Ionicons name="md-settings" size={24} />,
-      },
+const MyDrawerNavigator = createDrawerNavigator({
+  Home: {
+    screen: Myhome,
+    navigationOptions: {
+      drawerIcon: () => <Ionicons name="md-home" size={24} />,
     },
   },
-);
+  ScanScreen: {
+    screen: ScanScreen,
+    navigationOptions: {
+      drawerIcon: () => <Ionicons name="md-home" size={24} />,
+    },
+  },
+  CreatePost: {
+    screen: Post,
+    navigationOptions: {
+      drawerIcon: () => <Ionicons name="ios-create" size={24} />,
+    },
+  },
+  MyRequests: {
+    screen: MyRequests,
+    navigationOptions: {
+      drawerIcon: () => <Ionicons name="md-contacts" size={24} />,
+    },
+  },
+
+  Notification: {
+    screen: Notification,
+
+    navigationOptions: {
+      drawerIcon: () => <Ionicons name="md-notifications" size={24} />,
+    },
+  },
+  Settings: {
+    screen: Settings,
+    navigationOptions: {
+      drawerIcon: () => <Ionicons name="md-settings" size={24} />,
+    },
+  },
+});
 const AppNavigator = createStackNavigator({
   Home: {
     screen: MyDrawerNavigator,
