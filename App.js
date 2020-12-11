@@ -26,6 +26,7 @@ import {Container} from 'native-base';
 import React from 'react';
 import Store from './src/store/store';
 import {createDrawerNavigator} from 'react-navigation-drawer';
+import {MenuProvider} from 'react-native-popup-menu';
 
 // import {connect} from 'react-redux';
 import AsyncStorage from '@react-native-community/async-storage';
@@ -48,6 +49,7 @@ import Chatbot from './src/components/Chatbot';
 import Drawer from './src/components/drawer';
 import MyProfile from './src/bloodbank/Components/MyProfile/Myprofile';
 import ScanScreen from './src/components/qrCodeScanner';
+import MapBackGroundImage from './src/components/MapBackGroundImage';
 
 const MyDrawerNavigatorAfterLogin = createDrawerNavigator({
   Home: {
@@ -68,6 +70,10 @@ const AfterSignin = createStackNavigator({
   },
   Department: {screen: Department, navigationOptions: {headerShown: false}},
   ScanScreen: {screen: ScanScreen, navigationOptions: {headerShown: false}},
+  MapBackGroundImage: {
+    screen: MapBackGroundImage,
+    navigationOptions: {headerShown: false},
+  },
 
   MedicalUnit1: {screen: MedicalUnit1, navigationOptions: {headerShown: false}},
   Ent: {screen: Ent, navigationOptions: {headerShown: false}},
@@ -131,6 +137,10 @@ const BeforeSignin = createStackNavigator({
     navigationOptions: {headerShown: false},
   },
   ScanScreen: {screen: ScanScreen, navigationOptions: {headerShown: false}},
+  MapBackGroundImage: {
+    screen: MapBackGroundImage,
+    navigationOptions: {headerShown: false},
+  },
 
   Neurology: {screen: Neurology, navigationOptions: {headerShown: false}},
   Ophthamology: {screen: Ophthamology, navigationOptions: {headerShown: false}},
@@ -196,7 +206,9 @@ class MyApp extends React.Component {
     return (
       <Provider store={Store}>
         <Container>
-          <App />
+          <MenuProvider>
+            <App />
+          </MenuProvider>
         </Container>
       </Provider>
     );

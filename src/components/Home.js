@@ -73,8 +73,8 @@ class BloodHome extends Component {
         code: '#9b59b6',
         id: 4,
         nav: 'ScanScreen',
-        icon: 'blood-drop',
-        color: '#8a0303',
+        icon: 'qrcode',
+        color: 'blue',
       },
       {
         name: 'Doctors',
